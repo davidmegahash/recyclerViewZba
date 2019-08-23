@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="margin_border">8dp</dimen>
+    <dimen name="width_item_home">120dp</dimen>
+    <dimen name="height_item_home">120dp</dimen>
+    <dimen name="margin_bottom">84dp</dimen>
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="items_padding">10dp</dimen>
+    <dimen name="subtitle_size">8sp</dimen>
+    <dimen name="width_zero">0dp</dimen>
+    <dimen name="height_zero">0dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="image_view_height">100dp</dimen>
+</resources>

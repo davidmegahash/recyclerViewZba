@@ -1,14 +1,15 @@
-package com.globant.training.recyclerviewzba
+package com.globant.training.recyclerviewzba.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.globant.training.recyclerviewzba.R
 import com.globant.training.recyclerviewzba.model.Item
 import kotlinx.android.synthetic.main.list_layout.view.*
 
-class CustomAdapter(val itemList:ArrayList<Item>,val listener:AdapterEvents?): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomAdapter.ViewHolder {
+class CustomAdapter(val itemList:ArrayList<Item>,val listener: AdapterEvents?): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.list_layout,parent,false)
         return ViewHolder(v)
     }
@@ -17,7 +18,7 @@ class CustomAdapter(val itemList:ArrayList<Item>,val listener:AdapterEvents?): R
         return itemList.size
     }
 
-    override fun onBindViewHolder(holder: CustomAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(itemList[position])
         holder.bindListener(listener)
     }
@@ -41,7 +42,5 @@ class CustomAdapter(val itemList:ArrayList<Item>,val listener:AdapterEvents?): R
         }
     }
 
-    interface AdapterEvents{
-        fun onItemClicked(item:Item)
-    }
+
 }

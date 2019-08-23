@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.globant.training.recyclerviewzba.adapters.AdapterEvents
+import com.globant.training.recyclerviewzba.adapters.CustomAdapter
 import com.globant.training.recyclerviewzba.model.Item
 
-class MainActivity : AppCompatActivity(), CustomAdapter.AdapterEvents {
+class MainActivity : AppCompatActivity(),AdapterEvents {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +26,7 @@ class MainActivity : AppCompatActivity(), CustomAdapter.AdapterEvents {
         items.add(Item(3,"diceRoller3","Today could be your lucky day!","trivia_icon",fakeIntent))
         items.add(Item(4,"diceRoller4","Today could be your lucky day!","more_icon",fakeIntent))
 
-        val adapter = CustomAdapter(items,this)
+        val adapter = CustomAdapter(items, this)
         recyclerView.adapter = adapter
     }
 
